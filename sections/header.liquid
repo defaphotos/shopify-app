@@ -1,0 +1,49 @@
+{{ 'component-header.css' | asset_url | stylesheet_tag }}
+
+<header class="header">
+  <div class="header__first-section">
+
+    <div class="header__buscadorMenuLogo">
+      <img src="{{ 'logo.png' | asset_url }}" class="header__img" />
+      <div class="header__menu" x-data="{ openMenu: false }">
+        <i class="header__menu-icon fa-solid fa-bars" x-on:click="openMenu = !openMenu"></i>
+        <nav class="header__menu-sidebar" x-bind:class="{ 'header__menu-sidebar--show': openMenu }">
+          <div class="header__sidebar-header">
+            <div x-on:click="openMenu = false" class="header__sidebar-title">Cerrar</div>
+            <i x-on:click="openMenu = false" class="header__sidebar-close fa-solid fa-x"></i>
+          </div>
+          <ul class="header__sidebar">
+            {% for link in linklists.main-menu.links %}
+              <li class="header__sidebar-item">{{ link.title | link_to: link.url }}</li>
+            {% endfor %}
+          </ul>
+        </nav>
+      </div>
+      <div class="header__iconLupaMobileWrapper">
+        <i class="header__iconLupaMobile fa-solid fa-magnifying-glass"></i>
+      </div>
+    </div>
+    <div class="header__input-search">
+      <form>
+        <input type="text" class="header__search" />
+        <i class="header__iconLupa fa-solid fa-magnifying-glass"></i>
+      </form>
+    </div>
+
+    <div class="header__user-section">
+      <i class="header__iconUser fa-solid fa-user"></i>
+      <div class="header__line"></div>
+      <i class="header__iconHeart fa-solid fa-heart"></i>
+      <div class="header__line"></div>
+      <i class="header__iconCart fa-solid fa-cart-shopping"></i>
+    </div>
+
+  </div>
+  <nav class="header__navbar">
+    <ul class="header__navbar-list">
+      {% for link in linklists.main-menu.links %}
+        <li class="header__navbar-item">{{ link.title | link_to: link.url }}</li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>

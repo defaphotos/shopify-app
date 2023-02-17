@@ -1,0 +1,265 @@
+.header {
+    
+}
+
+.header__first-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 16px 20px;
+}
+
+@media (max-width: 768px) {
+    .header__first-section {
+        justify-content: space-between;
+    }
+}
+
+.header__buscadorMenuLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__img {
+    cursor: pointer;
+    width: 120px;
+    height: 120px;
+}
+
+@media (max-width: 768px) {
+    .header__img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+.header__menu {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .header__menu {
+        display: flex;
+        margin-left: 14px;
+        margin-right: 20px;
+    }
+}
+
+.header__menu-icon {
+    color: #666666;
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: all 0.3s;
+}
+
+.header__menu-icon:hover {
+    opacity: 1;
+}
+
+.header__menu-sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .3s;
+    background-color: #ef0241;
+    height: 100%;
+    z-index: 2;
+    width: 50vw;
+    transform: translateX(-100vw);
+}
+
+.header__menu-sidebar--show {
+    transform: translateX(0);
+}
+
+.header__sidebar-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 24px 40px;
+}
+
+.header__sidebar-title {
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.header__sidebar-close {
+    margin-left: 8px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.header__sidebar {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.header__sidebar-item {
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-bottom: 2px solid transparent;
+    color: #ffffff;
+    margin: 8px 0px;
+}
+
+.header__sidebar-item a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.header__input-search {
+    position: relative;
+    width: 36%;
+}
+
+@media (max-width: 768px){
+    .header__input-search {
+        display: none;
+    }
+}
+
+.header__search {
+    border: 2px solid #c9c9c9;
+    outline: none;
+    height: 40px;
+    border-radius: 20px;
+    padding-left: 48px;
+    caret-color: #c9c9c9;
+    color: #666666;
+    opacity: 0.7;
+    transition: all 0.5s;
+    width: 100%;
+    font-size: 20px;
+}
+
+.header__iconLupa {
+    color: #c9c9c9;
+    position: absolute;
+    left: 17px;
+    top: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.header__iconLupaMobileWrapper {
+    display: none;
+}
+
+
+@media (max-width: 768px){
+    .header__iconLupaMobileWrapper {
+        display: flex;
+    }
+}
+
+.header__iconLupaMobile {
+    color: #666666;
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: all 0.3s;
+}
+
+.header__user-section {
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__iconUser {
+    color: #666666;
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: all 0.3s;
+}
+
+.header__iconHeart {
+    color: #666666;
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: all 0.3s;
+}
+
+.header__iconCart {
+    color: #666666;
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: all 0.3s;
+}
+
+.header__iconCart:hover {
+    opacity: 1;
+    font-size: 26px;
+    color: #ef0241;
+}
+
+.header__iconUser:hover {
+    opacity: 1;
+    font-size: 26px;
+    color: #ef0241;
+}
+
+.header__iconHeart:hover {
+    opacity: 1;
+    font-size: 26px;
+    color: #ef0241;
+}
+
+.header__line {
+    border-left: 2px solid #c8c8c8;
+    margin: 5px 12px;
+    height: 14px;
+}
+
+.header__navbar {
+    background-color: #ef0241;
+    padding: 8px 24% 8px 24%;
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .header__navbar {
+        padding: 8px 16% 8px 16%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header__navbar {
+        display: none;
+    }
+}
+
+.header__navbar-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.header__navbar-item {
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-bottom: 2px solid transparent;
+    color: #ffffff;
+}
+
+.header__navbar-item:hover {
+    border-color: #ffffff;
+}
+
+.header__navbar-item a {
+    color: #ffffff;
+    text-decoration: none;
+}
